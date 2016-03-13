@@ -1,0 +1,286 @@
+/********************************
+*      ДОПОЛНИТЕЛЬНЫЕ СТИЛИ
+*********************************/
+@import "../../bower_components/normalize.css/normalize.css";
+@import "../../bower_components/bourbon/app/assets/stylesheets/bourbon";
+@import "../../bower_components/bourbon/app/assets/stylesheets/bourbon-deprecated-upcoming";
+@import "../../bower_components/bootstrap/scss/bootstrap-grid";
+
+@import "partials/sprite";
+
+@include sprites($spritesheet-sprites);
+
+
+
+
+
+//hover спрайта
+
+
+//.icon {
+//  @include sprite($icon);
+//  &:hover {
+//    @include sprite($icon-hover);
+//  }
+//}
+//.nav-mobail{
+//  @include sprite($nav-mobail);
+//  &:hover {
+//    @include sprite($nav-mobail-hover);
+//  }
+//}
+
+
+@include font-face("proxima_nova_regular", "../fonts/proxima_nova_regular");
+@include font-face("proxima_nova_bold", "../fonts/proxima_nova_bold");
+@include font-face("proxima_nova_semibold", "../fonts/proxima_nova_semibold");
+@include font-face("proxima_nova_thextrabold", "../fonts/proxima_nova_extrabold");
+
+
+
+
+
+// Переменые
+
+$em-base: 16px;
+$white:#ffffff;
+$color-black: #000000;
+$color-text: lighten($color-black, 17%);
+$color-astsent:#017f5a;
+$ff-pnr: "proxima_nova_regular";
+$ff-pnb: "proxima_nova_bold";
+$ff-pnsb: "proxima_nova_semibold";
+$ff-pnexb: "proxima_nova_thextrabold";
+
+// \\\ Переменые \\\
+
+
+
+
+//   Font Stacks  НАБОРЫ БАЗОВЫХ ШРИФТОВ
+
+//font-family: $georgia;
+//font-family: $helvetica;
+//font-family: $lucida-grande;
+//font-family: $monospace;
+//font-family: $verdana;
+
+
+
+
+
+
+
+*{
+  @include box-sizing(border-box);
+}
+.animat{
+  @include transition(all 0.5s $ease-out-cubic);
+}
+
+
+
+
+
+
+
+
+
+html{
+  font-size:$em-base;
+}
+
+body{
+  color: $color-text;
+  font-family: $helvetica;
+  font-family: $ff-pnr;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+b,
+strong{
+  font-family:$ff-pnb;
+}
+i{
+  display: inline-block;
+}
+ul{
+  padding:0;
+  list-style-type: none;
+}
+.left{
+  float: left;
+}
+.right{
+  float: right;
+}
+
+.both:after {
+  clear: both;
+  content: "";
+  display: block;
+  float: none;
+  margin: 0;
+  padding: 0;
+}
+.cr{
+  float: none;
+  clear: both;
+  margin: 0;
+  padding: 0;
+  font-size: 0.1px;
+  display: block;
+}
+
+/********************************
+*       ОСНОВНЫЕ СТИЛИ
+********************************/
+.wrapper-fluid{
+
+}
+.wrapper{
+  width:1180px;
+  margin:0 auto;
+}
+header{
+
+}
+.header-top{
+  padding:33px 0;
+}
+.wr-logo{
+
+  a{
+    display: inline-block;
+    float: left;
+  }
+  p{
+    float: left;
+    font-size:rem(13);
+    padding:0 36px;
+    margin: -3px 0;
+  }
+  span{
+    font-size:rem(12);
+    color: $color-black;
+    font-family:$ff-pnb;
+  }
+  i{
+    display: inline-block;
+    width:rem(8);
+    height:rem(8);
+    -webkit-border-radius: rem(5);
+    -moz-border-radius: rem(5);
+    border-radius: rem(5);
+    margin:0 4px;
+  }
+}
+.col-1{
+  background-color: #2d71cf;
+}
+.col-2{
+  background-color: #7218b2;
+}
+
+.language-wr{
+  padding:0;
+}
+
+.language{
+  margin:6px 0;
+  li{
+    display: inline-block;
+    text-align: center;
+    margin:0 2px;
+    &.active{
+      a{
+        background-color: #ededed;
+        color: $color-astsent;
+      }
+    }
+  }
+  a{
+    width:32px;
+    height:32px;
+    -webkit-border-radius:16px;
+    -moz-border-radius:16px;
+    border-radius:16px;
+    display: inline-block;
+    line-height:32px;
+    font-size:rem(14);
+    color: #c3c3c3;
+    text-transform: uppercase;
+    font-family:$ff-pnb;
+    text-decoration: none;
+    @include transition(all 0.5s $ease-out-cubic);
+  }
+
+}
+
+.file-pdf{
+  display: inline-block;
+  font-family:$ff-pnr;
+  font-size:rem(12);
+  color: $color-text;
+  text-transform: uppercase;
+  text-decoration: none;
+  vertical-align: middle;
+  border: 1px solid #f1f1f1;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  padding: 6px 6px 0px;
+  span{
+    font-family:$ff-pnexb;
+    font-size:rem(32);
+    color: $color-astsent;
+    float: left;
+    display: inline-block;
+    margin:-5px 5px 0 0;
+  }
+}
+
+
+.phone{
+  margin: 0 0 0 21px;
+  color: $color-black;
+  text-align: right;
+  span{
+    font-size:rem(32);
+    font-family:$ff-pnb;
+    color: $color-astsent;
+    display: inline-block;
+    margin:0 0 -5px 5px;
+  }
+  a{
+    font-size:rem(12);
+    color: $color-black;
+    &:hover{
+      text-decoration: none;
+      @include transition(all 0.5s $ease-out-cubic);
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*************************
+*     КАСТОМНЫЕ СТИЛИ
+**************************/
+
+@import "partials/media";
