@@ -21,10 +21,8 @@ $(document).ready(function(){
 
     $('.commandes .item').bind('mouseenter mouseleave', function(){
         $('.commandes .item').removeClass('active');
-        $(this).addClass('active').fadeIn({
-            duration: 2000,
-            easing: "show",
-        });
-    })
+        $(this).addClass('active');
+    });
+
 
 });

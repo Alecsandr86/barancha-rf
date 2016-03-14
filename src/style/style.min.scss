@@ -713,7 +713,7 @@ footer{
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
-
+    //@include transition(border 0.5s $ease-out-cubic);
   }
 
   .active{
@@ -721,6 +721,7 @@ footer{
       z-index:9;
       background-color: #fff;
       border: 3px solid $color-astsent;
+      @include transition(border 3s $ease-out-cubic);
     }
     .images{
       border: 3px solid transparent;
