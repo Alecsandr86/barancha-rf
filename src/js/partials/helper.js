@@ -17,6 +17,14 @@ $(document).ready(function(){
     $('.language li').bind('click', function(){
         $('.language li').removeClass('active');
         $(this).addClass("active");
+    });
+
+    $('.commandes .item').bind('mouseenter mouseleave', function(){
+        $('.commandes .item').removeClass('active');
+        $(this).addClass('active').fadeIn({
+            duration: 2000,
+            easing: "show",
+        });
     })
 
 });

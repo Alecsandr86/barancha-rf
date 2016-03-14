@@ -11,6 +11,17 @@ $icon-home: x y offset_x offset_y width height total_width total_height image_pa
 At the bottom of this section, we provide information about the spritesheet itself
 $spritesheet: width height image $spritesheet-sprites;
 */
+$fb-ico-name: 'fb-ico';
+$fb-ico-x: 74px;
+$fb-ico-y: 41px;
+$fb-ico-offset-x: -74px;
+$fb-ico-offset-y: -41px;
+$fb-ico-width: 25px;
+$fb-ico-height: 25px;
+$fb-ico-total-width: 286px;
+$fb-ico-total-height: 79px;
+$fb-ico-image: '../images/sprite.png';
+$fb-ico: (74px, 41px, -74px, -41px, 25px, 25px, 286px, 79px, '../images/sprite.png', 'fb-ico', );
 $logo-name: 'logo';
 $logo-x: 0px;
 $logo-y: 0px;
@@ -22,6 +33,17 @@ $logo-total-width: 286px;
 $logo-total-height: 79px;
 $logo-image: '../images/sprite.png';
 $logo: (0px, 0px, 0px, 0px, 286px, 41px, 286px, 79px, '../images/sprite.png', 'logo', );
+$message-ico-name: 'message-ico';
+$message-ico-x: 38px;
+$message-ico-y: 41px;
+$message-ico-offset-x: -38px;
+$message-ico-offset-y: -41px;
+$message-ico-width: 36px;
+$message-ico-height: 28px;
+$message-ico-total-width: 286px;
+$message-ico-total-height: 79px;
+$message-ico-image: '../images/sprite.png';
+$message-ico: (38px, 41px, -38px, -41px, 36px, 28px, 286px, 79px, '../images/sprite.png', 'message-ico', );
 $phone-ico-name: 'phone-ico';
 $phone-ico-x: 0px;
 $phone-ico-y: 41px;
@@ -33,10 +55,21 @@ $phone-ico-total-width: 286px;
 $phone-ico-total-height: 79px;
 $phone-ico-image: '../images/sprite.png';
 $phone-ico: (0px, 41px, 0px, -41px, 38px, 38px, 286px, 79px, '../images/sprite.png', 'phone-ico', );
+$tw-ico-name: 'tw-ico';
+$tw-ico-x: 99px;
+$tw-ico-y: 41px;
+$tw-ico-offset-x: -99px;
+$tw-ico-offset-y: -41px;
+$tw-ico-width: 25px;
+$tw-ico-height: 25px;
+$tw-ico-total-width: 286px;
+$tw-ico-total-height: 79px;
+$tw-ico-image: '../images/sprite.png';
+$tw-ico: (99px, 41px, -99px, -41px, 25px, 25px, 286px, 79px, '../images/sprite.png', 'tw-ico', );
 $spritesheet-width: 286px;
 $spritesheet-height: 79px;
 $spritesheet-image: '../images/sprite.png';
-$spritesheet-sprites: ($logo, $phone-ico, );
+$spritesheet-sprites: ($fb-ico, $logo, $message-ico, $phone-ico, $tw-ico, );
 $spritesheet: (286px, 79px, '../images/sprite.png', $spritesheet-sprites, );
 
 /*

@@ -21,6 +21,7 @@
     "bootstrap": "v4.0.0-alpha.2",
     "animate.css": "^3.5.1",
     "jquery.fancyspinbox": "^0.1.1",
-    "fullpage.js": "^2.7.8"
+    "fullpage.js": "^2.7.8",
+    "velocity": "^1.2.3"
   }
 }
