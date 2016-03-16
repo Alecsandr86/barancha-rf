@@ -50,7 +50,10 @@ $(document).ready(function(){
 
 
     $('.sections').find('footer').fadeOut();
+    $('.sections').find('.up-button').fadeOut();
     $('.wr-nav').find('.nav').fadeOut();
+    $('.sections').find('.form-style').removeClass('fadeInLeft animated');
+    $('.sections').find('.form-style').animate({'opacity':'0'});
 
     $('.wrapper-fluid').fullpage({
         //responsiveHeight : 945,
@@ -69,11 +72,19 @@ $(document).ready(function(){
                 duration: 500,
                 easing: 'easeInQuad'
             });
+            $('.active').find('.up-button').fadeIn({
+                duration: 500,
+                easing: 'easeInQuad'
+            });
+            $('.active').find('.form-style').animate({'opacity':'1'}).addClass('fadeInLeft animated');
 
         },
         onLeave: function(){
             $('.sections').find('footer').fadeOut();
             $('.wr-nav').find('.nav').fadeOut();
+            $('.sections').find('.up-button').fadeOut();
+            $('.sections').find('.form-style').removeClass('fadeInLeft animated');
+            $('.sections').find('.form-style').animate({'opacity':'0'});
         }
 
     });
