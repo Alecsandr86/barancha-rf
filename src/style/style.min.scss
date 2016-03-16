@@ -2,6 +2,8 @@
 *      ДОПОЛНИТЕЛЬНЫЕ СТИЛИ
 *********************************/
 @import "../../bower_components/normalize.css/normalize.css";
+@import "../../bower_components/animate.css/animate.min.css";
+@import "../../bower_components/fullpage.js/jquery.fullPage.css";
 @import "../../bower_components/bourbon/app/assets/stylesheets/bourbon";
 @import "../../bower_components/bourbon/app/assets/stylesheets/bourbon-deprecated-upcoming";
 @import "../../bower_components/bootstrap/scss/bootstrap-grid";
@@ -12,23 +14,23 @@
 
 
 
-
+.section {
+  text-align:center;
+  font-size: 3em;
+}
 
 //hover спрайта
 
 
-//.icon {
-//  @include sprite($icon);
-//  &:hover {
-//    @include sprite($icon-hover);
-//  }
-//}
-//.nav-mobail{
-//  @include sprite($nav-mobail);
-//  &:hover {
-//    @include sprite($nav-mobail-hover);
-//  }
-//}
+.message-ico{
+  @include sprite($message-ico);
+}
+.fb-ico{
+  @include sprite($fb-ico);
+  &:hover {
+    @include sprite($fb-ico-hover);
+  }
+}
 
 
 @include font-face("proxima_nova_regular", "../fonts/proxima_nova_regular");
@@ -141,12 +143,84 @@ ul{
 *       ОСНОВНЫЕ СТИЛИ
 ********************************/
 .wrapper-fluid{
-  overflow: hidden;
+  //overflow: hidden;
 }
 .wrapper{
   width:1180px;
   margin:0 auto;
 }
+
+.first-el.sections {
+  padding: 0!important;
+}
+
+.sections{
+  position: relative;
+  text-align: left;
+  //padding: 65px 0 74px;
+  border-bottom: 1px solid lighten($color-text,70%);
+
+  strong{
+
+  }
+  h1{
+    margin: 0 0 9px;
+    line-height:100px;
+    span{
+      line-height:127px;
+    }
+  }
+  cite{
+    font-style: normal;
+    font-family:$ff-pnb;
+    font-size:rem(25);
+    border-left: 5px solid $color-astsent;
+    display: block;
+    padding: 22px 0 26px 32px;
+    position: relative;
+    &:before{
+      content: '';
+      position: absolute;
+      top:0;
+      left:0;
+      width:16px;
+      height:5px;
+      background-color: $color-astsent;
+    }
+    &:after{
+      content: '';
+      position: absolute;
+      bottom:0;
+      left:0;
+      width:16px;
+      height:5px;
+      background-color: $color-astsent;
+    }
+  }
+
+  p{
+    font-family:$ff-pnb;
+    font-size:rem(31);
+    color: $color-black;
+    margin: 40px 0 13px;
+    span{
+      color: $color-astsent;
+    }
+  }
+  .phone{
+    font-size:rem(16);
+    margin:0;
+  }
+  //footer{
+  //  position: absolute;
+  //  bottom: 50px;
+  //  left:0;
+  //  width:100%;
+  //}
+}
+
+
+
 header{
 
 }
@@ -197,6 +271,7 @@ header{
     display: inline-block;
     text-align: center;
     margin:0 2px;
+    &:hover,
     &.active{
       a{
         background-color: #ededed;
@@ -285,6 +360,12 @@ header{
   }
 }
 
+.wr-nav{
+  height:90px;
+  padding:0 0 20px;
+}
+
+
 .nav{
   text-align: center;
   background-color: lighten($color-astsent,6%);
@@ -305,7 +386,7 @@ header{
     border-right: 1px solid rgba(255,255,255,0.3);
     @include transition(all 0.5s $ease-out-cubic);
     &:hover{
-      color: rgba($white,0.9);
+      color:#f2ed9f;
     }
   }
   .message{
@@ -314,6 +395,12 @@ header{
     a{
       border: none;
       color: #f2ed9f;
+      &:hover{
+        color: $white;
+       i{
+         @include sprite($message-ico-hover);
+       }
+      }
     }
   }
 }
@@ -354,11 +441,21 @@ header{
     vertical-align: middle;
     margin:0 3px;
   }
+
   a{
+    vertical-align: middle;
+    text-align: center;
+    width: 30px;
+    height:35px;
     display: inline-block;
-    @include transition(all 0.5s $ease-out-cubic);
-    &:hover{
-      opacity:0.8;
+
+    }
+    i{
+      vertical-align: middle;
+      display: inline-block;
+      margin:4px -4px 0 0;
+      &:hover{
+        margin:0;
     }
   }
 }
@@ -408,67 +505,23 @@ h2{
   .baranch-img{
     position: absolute;
     top: -114px;
-    left: 39.4%;
+    left: 44.4%;
   }
 
 }
 
-.sections{
-  position: relative;
-  padding: 65px 0 74px;
-  border-bottom: 1px solid lighten($color-text,70%);
 
-  strong{
 
-  }
-  h1{
-    margin: 0 0 9px;
-    line-height:100px;
-    span{
-      line-height:127px;
+.first-el{
+  &.sections{
+    padding: 0 0 74px;
+    header{
+      margin:0 0 65px;
     }
-  }
-  cite{
-    font-style: normal;
-    font-family:$ff-pnb;
-    font-size:rem(25);
-    border-left: 5px solid $color-astsent;
-    display: block;
-    padding: 22px 0 26px 32px;
-    position: relative;
-    &:before{
-      content: '';
-      position: absolute;
-      top:0;
-      left:0;
-      width:16px;
-      height:5px;
-      background-color: $color-astsent;
-    }
-    &:after{
-      content: '';
-      position: absolute;
-      bottom:0;
-      left:0;
-      width:16px;
-      height:5px;
-      background-color: $color-astsent;
-    }
-  }
-
-  p{
-    font-family:$ff-pnb;
-    font-size:rem(31);
-    color: $color-black;
-    margin: 40px 0 13px;
-    span{
-      color: $color-astsent;
-    }
-  }
-  .phone{
-    font-size:rem(16);
   }
 }
+
+
 
 .button{
   font-family:$ff-pnb;
@@ -496,7 +549,7 @@ h2{
   li{
     font-size:rem(14);
     margin: 20px 0 38px;
-    &:first-child{
+    &:hover{
       span{
         background-color: $color-astsent;
         color: $white;
@@ -520,6 +573,7 @@ h2{
     font-family:$ff-pnb;
     font-size:rem(20);
     float: left;
+    @include transition(all 0.5s $ease-out-cubic);
   }
   strong{
     margin:0;
@@ -527,6 +581,7 @@ h2{
     color: $color-text;
     display: block;
     padding:0;
+    @include transition(all 0.5s $ease-out-cubic);
   }
   p{
     padding:0 0 0 60px;
@@ -558,6 +613,10 @@ h2{
   }
 }
 
+.footers{
+  height:90px;
+  padding:20px 0;
+}
 
 footer{
 
@@ -684,9 +743,12 @@ footer{
     color: lighten($color-text,20%);
     font-family:$ff-pnr;
   }
-  span{
+  a{
     color: $color-astsent;
     font-family:$ff-pnb;
+    &:hover{
+      text-decoration: none;
+    }
   }
 }
 
@@ -779,19 +841,249 @@ footer{
 
 
 
+.list-mixitup{
+  margin:5px 0 0;
+  li{
+    display: inline-block;
+    margin:0 5px;
+  }
+  a{
+    display: inline-block;
+    color: $color-text;
+    font-size:rem(22);
+    text-transform: uppercase;
+    padding: 11px 20px;
+    border: 1px solid lighten($color-text, 50%);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    @include transition(all 0.5s $ease-out-cubic);
+  }
+  .active{
+    a{
+      border-color: $color-astsent;
+      color: $color-astsent;
+    }
+  }
+}
+
+.services{
+  margin: 79px 0 50px;
+}
+
+.services-catalog{
+  min-height:428px;
+  overflow: hidden;
+  .item{
+    position: relative;
+    width:25%;
+    min-height:200px;
+    float: left;
+    padding: 18px 44px;
+    margin: 0 0 10px;
+    border: 3px solid transparent;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    @include transition(border 0.5s $ease-out-cubic);
+    &.active{
+      border-color: $color-astsent;
+    }
+    i{
+      float: left;
+    }
+    p{
+      margin:0;
+      padding:0 0 0 60px;
+      font-size:rem(14);
+      color: $color-text;
+      font-family:$ff-pnr;
+      strong{
+        text-transform: uppercase;
+        color: $color-astsent;
+        font-size:rem(18);
+        padding: 6px 0;
+      }
+    }
+    a{
+      position: absolute;
+      top:0;
+      left:0;
+      right:0;
+      bottom:0;
+    }
+  }
+  .mix{
+    display: none;
+  }
+}
+
+
+.wr-map{
+  position: relative;
+  padding: 69px 0 0;
+}
+.map{
+  width:640px;
+  height: 640px;
+  margin:0 auto;
+  -webkit-border-radius: 320px;
+  -moz-border-radius: 320px;
+  border-radius: 320px;
+  overflow: hidden;
+}
+
+.titles-map{
+  position: absolute;
+  z-index:2;
+  top: 274px;
+  left: 59.7%;
+  width: 459px;
+  min-height: 332px;
+  background-color: $white;
+  border: 3px solid $color-astsent;
+  padding: 17px 40px 7px 44px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  &:before{
+    content: '';
+    background: url('../images/list-map-tch.png') 0 0 no-repeat;
+    width: 36px;
+    height: 66px;
+    position: absolute;
+    top: 41px;
+    left:-30px;
+  }
+}
+.list-map{
+  li{
+    font-family:$ff-pnr;
+    margin: 0 0 40px;
+    font-size:rem(14);
+  }
+  strong{
+    font-size:rem(22);
+    padding:0;
+    color: $color-astsent;
+    display: block;
+  }
+  a{
+    color: $color-astsent;
+  }
+  span{
+    color: $color-astsent;
+    font-family:$ff-pnb;
+  }
+}
 
 
 
 
+.contacts-section{
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  strong{
+    color: $color-astsent;
+    font-size:rem(50);
+    padding: 30px 0 8px;
+  }
+  p{
+    font-size:rem(22);
+    margin:0;
+  }
+}
+
+.form-style{
+  max-width:497px;
+  margin: 19px 0;
+  input{
+    background-color: $white;
+    padding:10px;
+    border: 1px solid lighten($color-text, 50%);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    width:46.2%;
+    color: $color-text;
+    font-family:$ff-pnb;
+    @include transition(border 0.5s $ease-out-cubic);
+    @include placeholder {
+      font-family:$ff-pnr;
+    }
+   &:focus,
+   &:active{
+     border: 1px solid $color-astsent;
+     outline: none;
+   }
+  }
+  input[type='email']{
+    margin: 0px 0 0 0.8%;
+    width: 52%;
+  }
+  input[type="submit"]{
+    width:115px;
+    padding:5px;
+    border: 3px solid lighten($color-text, 50%);
+    margin:8px 0 0;
+    &:hover{
+      border-color: $color-astsent;
+    }
+  }
+  textarea{
+    resize: none;
+    width:100%;
+    height:123px;
+    border: 1px solid lighten($color-text, 50%);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    padding:10px;
+    margin:10px 0 3px;
+    font-family:$ff-pnb;
+    @include placeholder {
+      font-family:$ff-pnr;
+    }
+    &:focus,
+    &:active{
+      border: 1px solid $color-astsent;
+      outline: none;
+    }
+  }
+}
+
+.form-bg{
+  background: url('../images/form-bg.png');
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  overflow: hidden;
+  padding:5px 0 0;
+}
 
 
 
-
-
-
-
-
-
+.up-button{
+  background: url('../images/UP-button.png') 0 0 no-repeat;
+  width: 36px;
+  height: 36px;
+  position: absolute;
+  bottom:60px;
+  right:20px;
+}
+.poa{
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:99;
+}
+.pad{
+  height:90px;
+}
 
 
 // \КОНТЕНТ\

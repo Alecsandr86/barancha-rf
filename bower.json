@@ -22,6 +22,8 @@
     "animate.css": "^3.5.1",
     "jquery.fancyspinbox": "^0.1.1",
     "fullpage.js": "^2.7.8",
-    "velocity": "^1.2.3"
+    "velocity": "^1.2.3",
+    "mixitup": "^2.1.11",
+    "onepage-scroll": "^1.3.1"
   }
 }
