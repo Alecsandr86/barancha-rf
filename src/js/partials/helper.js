@@ -20,7 +20,6 @@ $(document).ready(function(){
     //});
 
     $('.commandes .item').bind('mouseenter mouseleave', function(){
-        //$('.commandes .item').removeClass('active');
         $(this).toggleClass('active');
     });
     $('.list-mixitup li').bind('click',function(){
@@ -29,16 +28,18 @@ $(document).ready(function(){
     });
     $('.services-catalog .item').bind('mouseenter mouseleave', function(){
         $(this).toggleClass('active');
-    })
+    });
 
-
+    $('.mobail-nav').bind('click', function(){
+        $(this).toggleClass('active').parents('.nav').find('.up-nav').slideToggle(1000);
+    });
 
 
 
 
     $(window).bind("load resize",function() {
 
-        var height = $(window).height(); //естественно название переменной можно поставить любое )))
+        var height = $(window).height();
         var width = $(window).width();
 
         if(width <= 1029){

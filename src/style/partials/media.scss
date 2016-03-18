@@ -108,7 +108,8 @@
     min-height:980px;
     .baranch-img {
       top: auto;
-      left: 30%;
+      left: auto;
+      right:0;
       bottom:0;
     }
   }
@@ -243,10 +244,312 @@
 
 @media screen and(max-width: 769px){
 
+.phone{
+  float: right;
+}
+.nav{
+  padding: 5px 0 0;
+
+  li{
+    width:25%;
+  }
+  a{
+    padding:3px 0 12px;
+    font-size:rem(21);
+  }
+  .mobail-nav{
+    width:20%;
+   .nav-mobail{
+     margin:0 0 -6px;
+   }
+  }
+}
+
+  .sections{
+    h1 {
+      font-size: rem(70);
+      line-height: 30px;
+    }
+  }
+  h2{
+    padding: 0 0 0 10px;
+  }
+
+  .big-img {
+    .baranch-img {
+      left: auto;
+      right:0;
+    }
+  }
+
+  .pozition{
+    z-index:9;
+  }
+  .file-big-pdf {;
+    margin: 0 10px 0 0;
+    padding: 8px 10px 0 ;
+    span {
+      font-size: rem(36);
+      margin: -3px 5px 0 0;
+
+    }
+  }
+
+  strong {
+    font-size: rem(24);
+  }
+
+  footer {
+    .footer-list {
+      a {
+        font-size:rem(12);
+      }
+    }
+    .adress-min {
+      font-size:rem(11);
+    }
+
+  }
+
+  .become-part{
+    line-height: 18px;
+    padding:10px 10px 0 0;
+    p{
+      font-size:rem(18);
+    }
+    a{
+      font-size:rem(18);
+    }
+
+  }
+  .list-mixitup {
+    margin: 10px 0 0;
+    a {
+      padding: 7px 5px;
+    }
+
+  }
+
+  .services-catalog {
+    .item {
+      width: 49%;
+      padding: 10px;
+      min-height:150px;
+    }
+
+  }
+  .services {
+    margin: 40px 0;
+  }
+
+
+  .titles-map {
+    padding: 17px 40px 7px 30px;
+  }
+
+
+
+
+
+
 
 
 
 
 }
-@media screen and(max-width: 543px){}
+@media screen and(max-width: 543px){
+
+
+  .nav{
+    a{
+      padding:3px 0 12px;
+      font-size:rem(13);
+    }
+  }
+  .sections {
+    .phone {
+      float: none;
+      text-align: center;
+    }
+  h1{
+    font-size:rem(42);
+    span{
+      line-height:50px;
+      font-size:rem(42);
+    }
+  }
+
+  }
+
+  strong{
+    padding:0;
+  }
+
+  .big-img {
+    padding: 20px 0;
+    min-height: 590px;
+    .baranch-img{
+        width:300px;
+
+    }
+  }
+  .sections p{
+    font-size:rem(18);
+  }
+
+  h2 {
+    padding:0;
+    float: none!important;
+    text-align: center;
+  }
+  .file-big-pdf{
+    margin:0 auto;
+    display: block;
+    width:250px;
+    float: none;
+  }
+
+
+  .list-number{
+    strong{
+      font-size:rem(16);
+    }
+    p {
+      padding: 0 0 0 43px;
+      font-size:rem(16);
+    }
+  }
+
+  .titles {
+    padding: 0;
+    a{
+      margin: 0 5px 10px;
+    }
+  }
+
+  strong {
+    font-size: rem(18);
+  }
+
+  footer {
+    .footer-contacts {
+      margin: 10px 0;
+      text-align: center;
+      br{
+        display: none;
+      }
+    }
+    .footer-list{
+      text-align: center;
+      li{
+        margin:0;
+      }
+      a{
+        font-size:rem(11);
+      }
+    }
+
+  }
+  .footers{
+    height:auto;
+    padding:0;
+  }
+  .sections{
+    p {
+      font-size:rem(12);
+    }
+  }
+
+  .become-part{
+    float: none;
+    text-align: center;
+  }
+
+  .managing-partner{
+    width:100%;
+    img{
+      width: 284px;
+    }
+  }
+
+  .commandes {
+    .item {
+      width: 100%;
+    }
+
+  }
+  .list-mixitup {
+    float: none;
+    li {
+      width: 48%;
+      margin:0;
+    }
+    a{
+      width:100%;
+      font-size:rem(12);
+    }
+  }
+  .services-catalog {
+    .item {
+      width: 100%;
+      min-height: 100px;
+    }
+
+  }
+
+  .wr-map {
+    padding: 0;
+  }
+
+  .list-map {
+    li {
+      margin: 0 0 15px;
+    }
+  }
+
+  .contacts-section {
+    strong {
+      font-size:rem(32);
+      text-align: center;
+      display: block;
+    }
+    p{
+      text-align: center;
+    }
+  }
+
+
+  .form-bg {
+    padding: 5px 10px 0;
+    input,
+    input[type=email]{
+      width:100%;
+      margin:0 0 10px;
+    }
+  }
+
+  .map {
+    width: 300px;
+    height: 300px;
+    -webkit-border-radius: 150px;
+    -moz-border-radius: 150px;
+    border-radius: 150px;
+    //left:0;
+    //right:0;
+    img{
+      width:300px;
+    }
+  }
+
+.wr-logo{
+  text-align: center;
+  a{
+    float: none;
+  }
+
+}
+
+
+
+}
 @media screen and(max-width: 440px){}

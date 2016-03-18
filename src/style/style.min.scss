@@ -33,6 +33,15 @@
   }
 }
 
+.nav-mobail{
+  @include sprite($nav-mobail);
+  &:hover {
+    @include sprite($nav-mobail-hover);
+  }
+}
+
+
+
 
 @include font-face("proxima_nova_regular", "../fonts/proxima_nova_regular");
 @include font-face("proxima_nova_bold", "../fonts/proxima_nova_bold");
@@ -375,6 +384,7 @@ ul{
 
 
   .nav{
+    position: relative;
     text-align: center;
     background-color: lighten($color-astsent,6%);
     padding: 8px 0 12px;
@@ -385,7 +395,7 @@ ul{
       display: inline-block;
     }
     a{
-      display: inline-block;
+      display: block;
       color: $white;
       font-family:$ff-pnb;
       font-size:rem(25);
@@ -410,8 +420,43 @@ ul{
           }
         }
       }
+
     }
   }
+.mobail-nav{
+  &.active{
+    i{
+      @include sprite($nav-mobail-hover);
+    }
+    a{
+      background-color: $white;
+    }
+  }
+}
+.nav-mobail:hover {
+   background-position: none;
+}
+.up-nav{
+  display: none;
+  background-color: $white;
+  -webkit-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow:    0px 0px 2px 0px rgba(0, 0, 0, 0.2);
+  box-shadow:         0px 0px 2px 0px rgba(0, 0, 0, 0.2);
+  li{
+    display: block;
+    text-align: center;
+    border-bottom: 1px solid #e5e5e5;
+    width:100%!important;
+  }
+  a{
+    font-family:$ff-pnb;
+    font-size:25px;
+    color: $color-text;
+    padding:25px 0!important;
+  }
+}
+
+
 
   .header-bottom{
     padding:18px 0 14px;
@@ -930,7 +975,7 @@ ul{
 .pozition{
   position: absolute;
   bottom:50px;
-  left:30;
+  left:30px;
 }
   .wr-map{
     position: relative;
@@ -990,7 +1035,9 @@ ul{
     }
   }
 
-
+#section-5{
+  margin:0;
+}
 
 
   .contacts-section{
